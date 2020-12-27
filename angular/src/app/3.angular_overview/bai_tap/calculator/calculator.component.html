@@ -1,0 +1,26 @@
+<!--<p>calculator works!</p>-->
+<h2>Calculator</h2>
+<form class="form-inline">
+  <div>
+    <input type="number" class="form-control"
+           [value]="first"
+           (change)="onFirstChange($event.target.value)"/>
+    <select class="form-control"
+            [value]="operator"
+            (change)="onSelectChange($event.target.value)">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+    <input type="number" class="form-control"
+           [value]="second"
+           (change)="onSecondChange($event.target.value)"/>
+  </div>
+</form>
+<div>
+  <button class="btn btn-primary" (click)="calculator()">Thực thi</button>
+</div>
+<div class="output">
+  {{output}}
+</div>
