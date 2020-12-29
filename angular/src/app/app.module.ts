@@ -11,6 +11,8 @@ import { ColorComponent } from './3.angular_overview/bai_tap/color/color.compone
 import { HackernewsComponent } from './4.angular_component_template/thuc_hanh/hackernews/hackernews.component';
 import { NangCapHackernewsComponent } from './4.angular_component_template/bai_tap/nang-cap-hackernews/nang-cap-hackernews.component';
 import { LikesComponent } from './4.angular_component_template/bai_tap/nang-cap-hackernews/likes/likes.component';
+import { NameCardComponent } from './5. components_interaction/thuc_hanh/name-card/name-card.component';
+import { ProgressBarComponent } from './5. components_interaction/thuc_hanh/progress-bar/progress-bar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { LikesComponent } from './4.angular_component_template/bai_tap/nang-cap-
     ColorComponent,
     HackernewsComponent,
     NangCapHackernewsComponent,
-    LikesComponent
+    LikesComponent,
+    NameCardComponent,
+    ProgressBarComponent
   ],
     imports: [
         BrowserModule,
