@@ -1,0 +1,35 @@
+<h3 style="margin-left: 40%">List Student</h3>
+<table class="table table-striped table-hover">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Age</th>
+    <th>Mark</th>
+    <th>Result</th>
+    <th>Image</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let students of studentList">
+    <td>{{students.id}}</td>
+    <td>{{students.name}}</td>
+    <td>{{students.address}}</td>
+    <td>{{students.age}}</td>
+    <td>{{students.mark}}</td>
+    <td>
+      <p *ngIf="students.mark > 5; else failCase" style="color: green">pass</p>
+      <ng-template #failCase>
+        <p style="color: red">fail</p>
+      </ng-template>
+    </td>
+    <td><img style="width: 100px;height: 50px" [src]="students.image"></td>
+    <td><button class="btn btn-secondary" (click)="getDetailStudent(students)">Detail</button></td>
+  </tr>
+  </tbody>
+</table>
+<div *ngIf="studentDetail">
+  <app-student-detail [student]="studentDetail"></app-student-detail>
+</div>

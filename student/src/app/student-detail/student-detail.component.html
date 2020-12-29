@@ -1,0 +1,10 @@
+<h3>Student-detail</h3>
+<p>Id Sinh Viên: {{student.id}}</p>
+<p>Tên Sinh Viên: {{student.name}}</p>
+<p>Địa Chỉ Sinh Viên: {{student.address}}</p>
+<p>Tuổi Sinh Viên: {{student.age}}</p>
+<p>Điểm Sinh Viên: {{student.mark}}</p>
+<label>Chấm Điểm:</label>
+<input type="number" (change)="getMark($event.target.value)">
+<p>Hình Ảnh Sinh Viên:</p><img style="height: 100px;width: 200px" [src]="student.image">
+

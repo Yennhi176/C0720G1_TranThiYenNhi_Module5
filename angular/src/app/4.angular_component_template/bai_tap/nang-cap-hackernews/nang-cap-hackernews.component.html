@@ -1,0 +1,28 @@
+<h2>Today's article</h2>
+<hr>
+<!--<div>-->
+  <!--  <a href="{{article.url}}" target="_blank">{{article.title}}</a>-->
+<!--  <div *ngFor="let art of articles">-->
+<!--    <a href="{{art.url}}" target="_blank">{{art.title}}</a>-->
+<!--  </div>-->
+<!--  <div *ngFor="let art of articles">-->
+<!--    <a href="{{art.url}}" target="_blank">{{art.title}}</a>-->
+<!--    <app-likes></app-likes>-->
+<!--  </div>-->
+<!--</div>-->
+<div class="container-fluid">
+  <table>
+    <tr *ngFor="let art of articles">
+      <th>{{art.title}}</th>
+      <th><a href="{{art.url}}" target="_blank">{{art.title}}</a></th>
+      <th><app-likes></app-likes></th>
+    </tr>
+  </table>
+</div>
+<hr>
+<!--<textarea [value]="article.title" cols="70" id="article-title"></textarea>-->
+<!--<textarea [value]="article.url" cols="70" id="article-url"></textarea>-->
+<textarea [(ngModel)]="title" cols="70"></textarea>
+<textarea [(ngModel)]="url" cols="70"></textarea>
+<input (click)="addArticle()" type="button" value="Add">
+@CodeGym, 2019
