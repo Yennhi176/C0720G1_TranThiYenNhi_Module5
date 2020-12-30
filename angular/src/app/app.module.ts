@@ -13,6 +13,13 @@ import { NangCapHackernewsComponent } from './4.angular_component_template/bai_t
 import { LikesComponent } from './4.angular_component_template/bai_tap/nang-cap-hackernews/likes/likes.component';
 import { NameCardComponent } from './5. components_interaction/thuc_hanh/name-card/name-card.component';
 import { ProgressBarComponent } from './5. components_interaction/thuc_hanh/progress-bar/progress-bar.component';
+import { RatingBarComponent } from './5. components_interaction/bai_tap/rating-bar/rating-bar.component';
+import { CountdownTimerComponent } from './5. components_interaction/bai_tap/countdown-timer/countdown-timer.component';
+import { CountdownTimerAliasComponent } from './5. components_interaction/bai_tap/countdown-timer-alias/countdown-timer-alias.component';
+import { CountdownTimerEventComponent } from './5. components_interaction/bai_tap/countdown-timer-event/countdown-timer-event.component';
+import { CountdownTimerEventAliasComponent } from './5. components_interaction/bai_tap/countdown-timer-event-alias/countdown-timer-event-alias.component';
+import { CountdownTimerGetSetComponent } from './5. components_interaction/bai_tap/countdown-timer-get-set/countdown-timer-get-set.component';
+import { CountdownTimerOnchangesComponent } from './5. components_interaction/bai_tap/countdown-timer-onchanges/countdown-timer-onchanges.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +32,14 @@ import { ProgressBarComponent } from './5. components_interaction/thuc_hanh/prog
     NangCapHackernewsComponent,
     LikesComponent,
     NameCardComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    RatingBarComponent,
+    CountdownTimerComponent,
+    CountdownTimerAliasComponent,
+    CountdownTimerEventComponent,
+    CountdownTimerEventAliasComponent,
+    CountdownTimerGetSetComponent,
+    CountdownTimerOnchangesComponent
   ],
     imports: [
         BrowserModule,
