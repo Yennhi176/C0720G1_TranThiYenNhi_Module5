@@ -9,6 +9,8 @@ import {ProgressBarComponent} from './5. components_interaction/thuc_hanh/progre
 import {RatingBarComponent} from './5. components_interaction/bai_tap/rating-bar/rating-bar.component';
 import {CountdownTimerComponent} from './5. components_interaction/bai_tap/countdown-timer/countdown-timer.component';
 import {TodoComponent} from './6.angular_form/thuc_hanh/todo/todo.component';
+import {RegisterFinalComponent} from './6.angular_form/bai_tap/register-final/register-final.component';
+import {LoginComponent} from './6.angular_form/bai_tap/login/login.component';
 
 
 const routes: Routes = [
@@ -20,7 +22,9 @@ const routes: Routes = [
   {path: 'progress-bar', component: ProgressBarComponent},
   {path: 'rating-bar', component: RatingBarComponent},
   {path: 'countdown-timer', component: CountdownTimerComponent},
-  {path: 'todo', component: TodoComponent}
+  {path: 'todo', component: TodoComponent},
+  {path: 'register-final', component: RegisterFinalComponent},
+  {path: 'login', component: LoginComponent}
 ];
 
 @NgModule({

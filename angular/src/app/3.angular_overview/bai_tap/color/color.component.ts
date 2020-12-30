@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./color.component.scss']
 })
 export class ColorComponent implements OnInit {
-  color : '#D44D4A';
+  color: '#D44D4A';
   onChange(value){
     this.color = value;
   }

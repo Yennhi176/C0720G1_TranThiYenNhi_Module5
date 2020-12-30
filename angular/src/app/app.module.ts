@@ -21,6 +21,8 @@ import { CountdownTimerEventAliasComponent } from './5. components_interaction/b
 import { CountdownTimerGetSetComponent } from './5. components_interaction/bai_tap/countdown-timer-get-set/countdown-timer-get-set.component';
 import { CountdownTimerOnchangesComponent } from './5. components_interaction/bai_tap/countdown-timer-onchanges/countdown-timer-onchanges.component';
 import { TodoComponent } from './6.angular_form/thuc_hanh/todo/todo.component';
+import { RegisterFinalComponent } from './6.angular_form/bai_tap/register-final/register-final.component';
+import { LoginComponent } from './6.angular_form/bai_tap/login/login.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { TodoComponent } from './6.angular_form/thuc_hanh/todo/todo.component';
     CountdownTimerEventAliasComponent,
     CountdownTimerGetSetComponent,
     CountdownTimerOnchangesComponent,
-    TodoComponent
+    TodoComponent,
+    RegisterFinalComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
