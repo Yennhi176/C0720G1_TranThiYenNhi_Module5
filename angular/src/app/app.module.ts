@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontSizeComponent } from './3.angular_overview/thuc_hanh/font-size/font-size.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { PetComponent } from './3.angular_overview/thuc_hanh/pet/pet.component';
 import { CalculatorComponent } from './3.angular_overview/bai_tap/calculator/calculator.component';
 import { ColorComponent } from './3.angular_overview/bai_tap/color/color.component';
@@ -20,6 +20,7 @@ import { CountdownTimerEventComponent } from './5. components_interaction/bai_ta
 import { CountdownTimerEventAliasComponent } from './5. components_interaction/bai_tap/countdown-timer-event-alias/countdown-timer-event-alias.component';
 import { CountdownTimerGetSetComponent } from './5. components_interaction/bai_tap/countdown-timer-get-set/countdown-timer-get-set.component';
 import { CountdownTimerOnchangesComponent } from './5. components_interaction/bai_tap/countdown-timer-onchanges/countdown-timer-onchanges.component';
+import { TodoComponent } from './6.angular_form/thuc_hanh/todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -39,13 +40,15 @@ import { CountdownTimerOnchangesComponent } from './5. components_interaction/ba
     CountdownTimerEventComponent,
     CountdownTimerEventAliasComponent,
     CountdownTimerGetSetComponent,
-    CountdownTimerOnchangesComponent
+    CountdownTimerOnchangesComponent,
+    TodoComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        FormsModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
