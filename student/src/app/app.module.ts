@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ListStudentComponent } from './list-student/list-student.component';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,10 +15,11 @@ import { CreateStudentComponent } from './create-student/create-student.componen
     StudentDetailComponent,
     CreateStudentComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

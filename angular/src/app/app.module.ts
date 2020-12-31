@@ -23,6 +23,9 @@ import { CountdownTimerOnchangesComponent } from './5. components_interaction/ba
 import { TodoComponent } from './6.angular_form/thuc_hanh/todo/todo.component';
 import { RegisterFinalComponent } from './6.angular_form/bai_tap/register-final/register-final.component';
 import { LoginComponent } from './6.angular_form/bai_tap/login/login.component';
+import {TimelinesComponent} from './7.service_router/thuc_hanh/timelines/timelines.component';
+import { YoutubePlayerComponent } from './7.service_router/thuc_hanh/youtube-player/youtube-player.component';
+import { YoutubePlaylistComponent } from './7.service_router/thuc_hanh/youtube-playlist/youtube-playlist.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,10 @@ import { LoginComponent } from './6.angular_form/bai_tap/login/login.component';
     CountdownTimerOnchangesComponent,
     TodoComponent,
     RegisterFinalComponent,
-    LoginComponent
+    LoginComponent,
+    TimelinesComponent,
+    YoutubePlayerComponent,
+    YoutubePlaylistComponent
   ],
   imports: [
     BrowserModule,

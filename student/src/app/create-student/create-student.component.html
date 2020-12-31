@@ -1,29 +1,69 @@
-<form>
+<h3>Create Student</h3>
+<form [formGroup]="createStudentForm" (ngSubmit)="saveStudent(createStudentForm)">
   <div class="row-cols-5">
-  <div class="form-group">
-    <label for="id">Id</label>
-    <input type="text" class="form-control" id="id" aria-describedby="emailHelp" placeholder="id">
+      <div class="form-group">
+        <label for="id">Id</label>
+        <input
+          formControlName="id"
+          type="text" class="form-control" id="id" aria-describedby="emailHelp" placeholder="id">
+      </div>
+      <div class="text-danger" *ngFor="let validation of validation_messages.id">
+        <div class="error-message"
+             *ngIf="createStudentForm.get('id').hasError(validation.type) && (createStudentForm.get('id').dirty || createStudentForm.get('id').touched)">
+          {{validation.message}}</div>
+      </div>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          formControlName="name"
+          type="text" class="form-control" id="name" placeholder="name">
+      </div>
+      <!--    <div *ngIf="createStudentForm.get('name').invalid && createStudentForm.get('name').touched">-->
+      <!--      <div  class="text-danger" *ngIf="createStudentForm.get('name').hasError('required')">Name is required</div>-->
+      <!--      <div  class="text-danger" *ngIf="createStudentForm.get('name').hasError('minLength')">Name > 5</div>-->
+      <!--    </div>-->
+      <div class="text-danger" *ngFor="let validation of validation_messages.name">
+        <div class="error-message"
+             *ngIf="createStudentForm.get('name').hasError(validation.type) && (createStudentForm.get('name').dirty || createStudentForm.get('name').touched)">
+          {{validation.message}}</div>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input
+          formControlName="address"
+          type="text" class="form-control" id="address" placeholder="Address">
+      </div>
+      <div class="text-danger" *ngFor="let validation of validation_messages.address">
+        <div class="error-message"
+             *ngIf="createStudentForm.get('address').hasError(validation.type) && (createStudentForm.get('address').dirty || createStudentForm.get('address').touched)">
+          {{validation.message}}</div>
+      </div>
+      <!--    <div class="text-danger" *ngIf="createStudentForm.get('address').hasError('required')">-->
+      <!--      Address is required-->
+      <!--    </div>-->
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input
+          formControlName="age"
+          type="text" class="form-control" id="age" placeholder="age">
+      </div>
+      <!--    <div class="text-danger" *ngIf="createStudentForm.get('age').hasError('required')">-->
+      <!--      Age is required-->
+      <!--    </div>-->
+      <div class="form-group">
+        <label for="mark">Mark</label>
+        <input
+          formControlName="mark"
+          type="text" class="form-control" id="mark" placeholder="mark">
+      </div>
+      <div class="form-group">
+        <label for="image">Image</label>
+        <input
+          formControlName="image"
+          type="text" class="form-control" id="image" placeholder="image">
+      </div>
+
+
   </div>
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" class="form-control" id="name" placeholder="name">
-  </div>
-  <div class="form-group">
-    <label for="address">Address</label>
-    <input type="text" class="form-control" id="address" placeholder="Address">
-  </div>
-  <div class="form-group">
-    <label for="age">Age</label>
-    <input type="text" class="form-control" id="age" placeholder="age">
-  </div>
-  <div class="form-group">
-    <label for="mark">Mark</label>
-    <input type="text" class="form-control" id="mark" placeholder="mark">
-  </div>
-  <div class="form-group">
-    <label for="image">Image</label>
-    <input type="text" class="form-control" id="image" placeholder="image">
-  </div>
-  <button type="submit" class="btn btn-primary">Create</button>
-  </div>
+  <button type="submit" [disabled]="!createStudentForm.valid" class="btn btn-primary">Create</button>
 </form>

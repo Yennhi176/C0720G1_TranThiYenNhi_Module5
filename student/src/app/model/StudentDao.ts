@@ -1,7 +1,7 @@
 import {IStudent} from './IStudent';
 
 export class StudentDao {
-  public studentDao: IStudent[] = [
+  public static studentDao: IStudent[] = [
     {
       id: 1,
       name: 'Tran Yen Nhi1',
@@ -27,4 +27,8 @@ export class StudentDao {
       image: 'https://i.pinimg.com/originals/31/07/6b/31076b612c07839a4ed394b2901971bc.jpg'
     },
   ];
+
+  static getStudentList(){
+    return this.studentDao;
+  }
 }
