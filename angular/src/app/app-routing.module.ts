@@ -14,6 +14,7 @@ import {LoginComponent} from './6.angular_form/bai_tap/login/login.component';
 import {TimelinesComponent} from './7.service_router/thuc_hanh/timelines/timelines.component';
 import {YoutubePlayerComponent} from './7.service_router/thuc_hanh/youtube-player/youtube-player.component';
 import {YoutubePlaylistComponent} from './7.service_router/thuc_hanh/youtube-playlist/youtube-playlist.component';
+import {DictionaryComponent} from './7.service_router/bai_tap/dictionary/dictionary.component';
 
 
 const routes: Routes = [
@@ -30,6 +31,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'time-lines', component: TimelinesComponent},
   {path: 'youtube-player', component: YoutubePlaylistComponent, children: [{path: 'youtube-playlist', component: YoutubePlayerComponent}]},
+  {path: 'dictionary', component: DictionaryComponent}
 
 ];
 

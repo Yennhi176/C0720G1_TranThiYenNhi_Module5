@@ -2,6 +2,8 @@ import {Component, Input, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {IStudent} from '../model/IStudent';
 import {StudentDao} from '../model/StudentDao';
+import {Router} from '@angular/router';
+import {StudentService} from '../student.service';
 
 @Component({
   selector: 'app-create-student',
@@ -14,7 +16,7 @@ export class CreateStudentComponent implements OnInit {
   // studentList: IStudent[];
 
 
-  constructor() {
+  constructor(private router: Router, private studentService: StudentService) {
   }
   // tslint:disable-next-line:variable-name
   validation_messages = {
@@ -44,7 +46,9 @@ export class CreateStudentComponent implements OnInit {
   }
 
   saveStudent(createStudentForm: FormGroup) {
-    console.log(createStudentForm.value);
-    StudentDao.getStudentList().unshift(createStudentForm.value);
+    // console.log(createStudentForm.value);
+    // StudentDao.getStudentList().unshift(createStudentForm.value);
+   this.studentService.saveStudent(createStudentForm.value);
+   this.router.navigateByUrl('');
   }
 }

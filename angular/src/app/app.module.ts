@@ -26,6 +26,9 @@ import { LoginComponent } from './6.angular_form/bai_tap/login/login.component';
 import {TimelinesComponent} from './7.service_router/thuc_hanh/timelines/timelines.component';
 import { YoutubePlayerComponent } from './7.service_router/thuc_hanh/youtube-player/youtube-player.component';
 import { YoutubePlaylistComponent } from './7.service_router/thuc_hanh/youtube-playlist/youtube-playlist.component';
+import { DictionaryComponent } from './7.service_router/bai_tap/dictionary/dictionary.component';
+import { DictionaryDetailComponent } from './7.service_router/bai_tap/dictionary-detail/dictionary-detail.component';
+import { DictionaryPageComponent } from './7.service_router/bai_tap/dictionary-page/dictionary-page.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +54,10 @@ import { YoutubePlaylistComponent } from './7.service_router/thuc_hanh/youtube-p
     LoginComponent,
     TimelinesComponent,
     YoutubePlayerComponent,
-    YoutubePlaylistComponent
+    YoutubePlaylistComponent,
+    DictionaryComponent,
+    DictionaryDetailComponent,
+    DictionaryPageComponent
   ],
   imports: [
     BrowserModule,
